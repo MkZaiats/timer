@@ -11,7 +11,6 @@ hours.textContent = date.getHours() < 10 ? '0' + date.getHours() : date.getHours
 minutes.textContent = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getHours()
 month.textContent = `${date.getDate()} ${months[date.getMonth()]}`
 let seconds = date.getSeconds()
-console.log(seconds);
 
 function timer () {
     setInterval(() => {
