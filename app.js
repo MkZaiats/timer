@@ -7,8 +7,8 @@ const month = document.querySelector('.month')
 const months = ["January","February","March","April","May",
 "June","July","August","September","October","November","December"]
 
-hours.textContent = date.getHours()
-minutes.textContent = date.getMinutes()
+hours.textContent = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+minutes.textContent = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getHours()
 month.textContent = `${date.getDate()} ${months[date.getMonth()]}`
 let seconds = date.getSeconds()
 console.log(seconds);
@@ -18,8 +18,8 @@ function timer () {
         date = new Date ()
         seconds = date.getSeconds()
         if (seconds === 1) {
-            hours.textContent = date.getHours()
-            minutes.textContent = date.getMinutes()
+            hours.textContent = date.getHours() < 10 ? '0' + date.getHours() : date.getHours()
+            minutes.textContent = date.getMinutes() < 10 ? '0' + date.getMinutes() : date.getHours()
             month.textContent = `${date.getDate()} ${months[date.getMonth()]}`
         }
     },1000)
